@@ -7,7 +7,7 @@ urlpatterns = [
     path('profile/',views.ProfileView.as_view(), name="profile"),
     path('resetpassword/',views.ResetPassword.as_view(), name="resetpassword"),
     path('confirm/', views.confirm, name="confirm"),
-    path('blog/', views.BlogCreate, name="blog"),
-    path('blog/<int:pk>', views.BlogDetailView, name="blog"),
+    path('blog/', views.BlogCreate.as_view(), name="blog"),
+    path('blog/<int:pk>', views.BlogDetailView.as_view(), name="blog"),
 
 ]

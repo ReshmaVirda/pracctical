@@ -2,7 +2,7 @@ import email
 from django.shortcuts import render
 from django.http.response import Http404, HttpResponse
 from .models import Blog, User
-from  .forms import Registerform,Loginform
+
 from django.urls import reverse
 from django.template import loader
 from django.http import HttpResponseRedirect

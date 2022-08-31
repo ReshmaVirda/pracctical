@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#x59ig5brk6m)z5_=@c%3#g^5-dv5%!x1m3&y_kmotinyn!g^+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "corsheaders",
     'rest_framework_simplejwt',
 ]
-AUTH_USER_MODEL = 'myapp.User'
+
+# AUTH_USER_MODEL = 'myapp.user'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -178,9 +179,8 @@ EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
-
+import os
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/css/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'css')
