@@ -1,0 +1,13 @@
+{% block content %}
+<ul>
+
+    <input type="text" name="firstname" placeholder="Enter your firstname"><br>
+    <input type="text" name="lastname" placeholder="Enter your lastname"><br>
+    <input type="text" name="email" placeholder="Enter your email"><br>
+    <input type="text" name="password" placeholder="Enter your password"><br>
+    <input type="text" name="birthdate" placeholder="Enter your birthdate"><br>
+    <button type="submit" class="btn btn-outline-success"><a href="{% url 'profile/' %}">Update</a></button>
+    
+
+</ul>
+{% endblock %}

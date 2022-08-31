@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <form method="POST" action="/login/">
+        {% csrf_token %}
+        <input type="text" name="email" placeholder="Enter your email"><br>
+        <input type="text" name="password" placeholder="Enter your password"><br>
+        <button type="submit" class="btn btn-outline-success"><a href="{% url 'login/' %}">Login</a></button>
+
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
